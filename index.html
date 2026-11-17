@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>عبده محمد سعيد أحمد حميد | بطاقة رقمية</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+*{font-family:'Cairo',sans-serif;box-sizing:border-box}
+:root{--gold:#d6b36a}
+body{background:#080808;color:#fff;min-height:100vh}
+.glow{position:fixed;width:300px;height:300px;background:rgba(214,179,106,.10);filter:blur(110px);border-radius:50%;z-index:-1;pointer-events:none}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.015));border:1px solid rgba(214,179,106,.23);backdrop-filter:blur(25px);box-shadow:0 25px 70px rgba(0,0,0,.6)}
+.gold-text{background:linear-gradient(120deg,#fff0b9,#d6b36a,#a77c32);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.gold-btn{background:linear-gradient(135deg,#f3dc9d,#b88a3d);color:#17120a;box-shadow:0 8px 30px rgba(214,179,106,.2)}
+.social{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);transition:.25s}
+.social:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.ring{padding:4px;background:linear-gradient(135deg,#f5df9d,#80602c,#e8c77e);border-radius:50%}
+.line{height:1px;background:linear-gradient(to left,transparent,#d6b36a,transparent)}
+.fade{animation:fade .8s ease both}@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body class="flex justify-center px-4 py-8">
+<div class="glow top-0 right-0"></div><div class="glow bottom-0 left-0"></div>
+<main class="w-full max-w-md fade">
+  <header class="flex justify-between items-center mb-7">
+    <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full border border-yellow-600/50 flex items-center justify-center"><i data-lucide="crown" class="w-4 h-4 text-yellow-500"></i></div><span class="text-xs tracking-widest text-gray-400">DIGITAL IDENTITY</span></div>
+    <button onclick="shareCard()" class="flex items-center gap-2 text-xs border border-yellow-600/40 rounded-full px-4 py-2 text-yellow-400"><i data-lucide="share-2" class="w-4 h-4"></i>مشاركة الكارت 🔗</button>
+  </header>
+
+  <section class="glass rounded-[30px] p-7 text-center relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-32 h-32 bg-yellow-500/5 blur-3xl"></div>
+    <div class="flex justify-center mb-5 relative">
+      <div class="ring w-36 h-36">
+        <div class="w-full h-full bg-[#151515] rounded-full overflow-hidden">
+          <img id="profilePhoto" alt="الصورة الشخصية لعبده محمد سعيد أحمد حميد" class="w-full h-full object-cover object-top" src="profile-photo.jpg">
+        </div>
+      </div>
+      <div class="absolute bottom-1 right-[calc(50%-52px)] bg-green-500 w-4 h-4 rounded-full border-[3px] border-[#151515]"></div>
+    </div>
+
+    <h1 class="text-2xl font-extrabold gold-text mb-2">عبده محمد سعيد أحمد حميد</h1>
+    <p class="text-gray-300 text-sm font-semibold mb-3">محاسب مالي</p>
+    <div class="flex items-center justify-center gap-3 mb-5"><span class="w-8 h-px bg-yellow-700"></span><span class="text-[11px] tracking-widest text-yellow-500">FINANCIAL ACCOUNTANT</span><span class="w-8 h-px bg-yellow-700"></span></div>
+    <p class="text-gray-400 text-sm leading-8 mb-6">خبرة في التدقيق المالي ومراجعة الحسابات.</p>
+    <div class="line mb-6"></div>
+
+    <div class="flex items-center justify-center gap-3 mb-7">
+      <div class="w-10 h-10 rounded-xl bg-yellow-500/10 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5 text-yellow-500"></i></div>
+      <div class="text-right"><p class="text-gray-500 text-xs">رقم الهاتف</p><p class="text-white text-sm font-semibold" dir="ltr">+967 778 667 816</p></div>
+    </div>
+
+    <button onclick="saveContact()" class="gold-btn w-full py-4 rounded-2xl font-extrabold text-base flex items-center justify-center gap-3"><i data-lucide="contact" class="w-5 h-5"></i>حفظ جهة الاتصال 📥</button>
+    <a href="https://wa.me/967778667816" target="_blank" rel="noopener" class="w-full mt-3 py-4 rounded-2xl border border-green-600/40 bg-green-500/10 text-green-400 font-bold flex justify-center items-center gap-3"><i data-lucide="message-circle" class="w-5 h-5"></i>تواصل معي عبر واتساب</a>
+    <a href="tel:+967778667816" class="w-full mt-3 py-4 rounded-2xl border border-white/10 bg-white/5 text-gray-200 font-semibold flex justify-center items-center gap-3"><i data-lucide="phone-call" class="w-5 h-5 text-yellow-500"></i>اتصال مباشر</a>
+    <button onclick="openLocation()" class="w-full mt-3 py-4 rounded-2xl border border-white/10 bg-white/5 text-gray-200 font-semibold flex justify-center items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-yellow-500"></i>موقعي على خرائط Google</button>
+
+    <div class="line my-7"></div>
+    <p class="text-xs text-gray-500 mb-4">يسعدني تواصلكم معي</p>
+    <div class="flex justify-center gap-4">
+      <a href="https://wa.me/967778667816" target="_blank" rel="noopener" class="social w-12 h-12 rounded-2xl flex items-center justify-center text-gray-300"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+      <a href="tel:+967778667816" class="social w-12 h-12 rounded-2xl flex items-center justify-center text-gray-300"><i data-lucide="phone" class="w-5 h-5"></i></a>
+      <button onclick="shareCard()" class="social w-12 h-12 rounded-2xl flex items-center justify-center text-gray-300"><i data-lucide="share-2" class="w-5 h-5"></i></button>
+    </div>
+  </section>
+
+  <footer class="text-center mt-7"><p class="text-gray-600 text-[11px] tracking-wider">DIGITAL BUSINESS CARD</p><p class="gold-text text-xs mt-2 font-semibold">عبده محمد سعيد أحمد حميد</p><p class="text-gray-700 text-[10px] mt-3">© 2026 جميع الحقوق محفوظة</p></footer>
+</main>
+
+<script>
+function saveContact() {
+  const esc = s => s.replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;");
+  const vcard = ["BEGIN:VCARD","VERSION:3.0","FN;CHARSET=UTF-8:"+esc("عبده محمد سعيد أحمد حميد"),"TITLE;CHARSET=UTF-8:"+esc("محاسب مالي"),"TEL;TYPE=CELL:+967778667816","NOTE;CHARSET=UTF-8:"+esc("خبرة في التدقيق المالي"),"END:VCARD"].join("\r\n");
+  const blob = new Blob([vcard],{type:"text/vcard;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a"); a.href=url; a.download="Abduh_Contact.vcf"; a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+async function shareCard() {
+  const data={title:"عبده محمد سعيد أحمد حميد",text:"بطاقتي الشخصية الرقمية - محاسب مالي",url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else {try{await navigator.clipboard.writeText(location.href);alert("تم نسخ رابط البطاقة.")}catch(e){alert("انسخ رابط الصفحة يدوياً.")}}
+}
+function openLocation() {
+  const loc=prompt("أدخل عنوان موقعك أو اسم المدينة لفتحها على خرائط Google:");
+  if(loc) window.open("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(loc),"_blank","noopener");
+}
+if(window.lucide) lucide.createIcons();
+</script>
+</body></html>
